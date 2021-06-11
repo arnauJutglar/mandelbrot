@@ -33,6 +33,7 @@ int main() {
     z = iter(c1, 2);
     */
     z = quadrat(c1);
+    z = fractal(c1, 40);
     
     printf("%lf %lfi\n", z.re, z.im);
     
@@ -71,10 +72,10 @@ c quadrat(c z) {
     c r;
     
     r.re = z.re * z.re - z.im * z.im;
-    printf("real = %lf\n", z.re);
+    printf("real = %lf\n", r.re);
     
-    z.im = 2 * z.re * z.im;
-    printf("imaginari = %lf\n", z.im);
+    r.im = 2 * z.re * z.im;
+    printf("imaginari = %lf\n", r.im);
     
     return r;
 }
